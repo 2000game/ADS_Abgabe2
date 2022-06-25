@@ -174,55 +174,39 @@ class KnapsackTest {
         k.backtracking();
     }
 
-    void worst_case_knapsack_runtime(int array_length) {
-        double start;
-        double finish;
-        int[] gewichte = new int[array_length];
-        int[] werte = new int[array_length];
-        for (int i = 0; i < 10; i++) {
-            gewichte[i] = 1;
-            werte[i] = 1;
-        }
-        knapsack k = new knapsack(gewichte, werte, array_length);
-        start = System.nanoTime();
-        k.backtracking();
-        finish = System.nanoTime();
-        System.out.println();
-        System.out.println(array_length + "-Array Laenge backtracking\nDauer: " + (finish - start) / 1000000.0 + " ms\n");
-        System.out.println();
-    }
-
     @Test
     void worst_case_knapsack_runtime_10() {
-        worst_case_knapsack_runtime(10);
+        knapsack.worst_case_knapsack_runtime(10);
     }
 
     @Test
     void worst_case_knapsack_runtime_20() {
-        worst_case_knapsack_runtime(20);
+        knapsack.worst_case_knapsack_runtime(20);
     }
 
     @Test
     void worst_case_knapsack_runtime_50() {
-        worst_case_knapsack_runtime(50);
+        knapsack.worst_case_knapsack_runtime(50);
     }
 
     @Test
     void worst_case_knapsack_runtime_100() {
-        worst_case_knapsack_runtime(100);
-    }
-    @Test
-    void worst_case_knapsack_runtime_200() {
-        worst_case_knapsack_runtime(200);
-    }
-    @Test
-    void worst_case_knapsack_runtime_500() {
-        worst_case_knapsack_runtime(500);
-    }
-    @Test
-    void worst_case_knapsack_runtime_1000() {
-        worst_case_knapsack_runtime(1000);
+        knapsack.worst_case_knapsack_runtime(100);
     }
 
+    @Test
+    void worst_case_knapsack_runtime_200() {
+        knapsack.worst_case_knapsack_runtime(200);
+    }
+
+    @Test
+    void worst_case_knapsack_runtime_500() {
+        knapsack.worst_case_knapsack_runtime(500);
+    }
+
+    @Test
+    void worst_case_knapsack_runtime_1000() {
+        knapsack.worst_case_knapsack_runtime(1000);
+    }
 
 }

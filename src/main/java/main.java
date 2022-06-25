@@ -1,9 +1,20 @@
-import java.util.Arrays;
-import java.util.OptionalDouble;
-import java.util.Random;
+import java.util.*;
 
 public class main {
    static Random r = new Random();
+
+    public static void calculate_constant() {
+        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+        for (int i = 100; i < 10000; i+=100 ) {
+            map.put(i, knapsack.worst_case_knapsack_runtime(i));
+        }
+        int avg = 0;
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            avg += entry.getKey() / entry.getValue();
+        }
+        avg = avg / map.size();
+        System.out.println("Average Constant: " + avg);
+    }
     public static void main(String[] args) {
         // build knapsack problem
         int[] gewichte = {10, 5, 7, 11, 13, 1, 7, 11, 13, 19, 19, 9, 8, 2, 7, 31};
@@ -39,7 +50,10 @@ public class main {
         System.out.println("Gewicht: " + greedy_knapsack_2.gewicht_beladung);
         System.out.println("Wert: " + greedy_knapsack_2.wert_beladung);
         System.out.println("-----------------------------------------------------");
+        calculate_constant();
     }
+
+
 
 
 

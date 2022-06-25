@@ -114,4 +114,23 @@ public class knapsack {
         beladung = solution;
         return solution;
     }
+
+    public static int worst_case_knapsack_runtime(int array_length) {
+        double start;
+        double finish;
+        int[] gewichte = new int[array_length];
+        int[] werte = new int[array_length];
+        for (int i = 0; i < 10; i++) {
+            gewichte[i] = 1;
+            werte[i] = 1;
+        }
+        knapsack k = new knapsack(gewichte, werte, array_length);
+        start = System.nanoTime();
+        k.backtracking();
+        finish = System.nanoTime();
+        System.out.println();
+        System.out.println(array_length + "-Array Laenge backtracking\nDauer: " + (finish - start) / 1000000.0 + " ms\n");
+        System.out.println();
+        return (int) (finish - start) / 1000000;
+    }
 }

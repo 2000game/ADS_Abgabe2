@@ -5,7 +5,7 @@ public class main {
         int[] werte = {7, 6, 1, 1, 1, 4, 11, 20, 3, 7, 8, 9, 16, 19, 100, 3};
         int maxgewicht = 30;
         knapsack k = new knapsack(gewichte, werte, maxgewicht);
-        int[] ausgewaehlt = k.backtracking();
+        int[] ausgewaehlt = k.greedyRucksack();
         System.out.println("Gewicht: " + k.gewicht_beladung);
         System.out.println("Wert: " + k.wert_beladung);
         System.out.print("Ausgewaehlt: ");

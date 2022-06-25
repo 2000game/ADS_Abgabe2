@@ -34,6 +34,12 @@ public class knapsack {
     }
 
     public int[] backtracking(){
+        if (gewichte.length != werte.length) {
+            throw new IllegalArgumentException("Gewichte und Werte müssen gleich lang sein");
+        }
+        if (maxgewicht < 0) {
+            throw new IllegalArgumentException("Maximalgewicht muss positiv sein");
+        }
         int[] solution = this.rucksack(new int[gewichte.length], maxgewicht, 0, new int[gewichte.length], 0);
         gewicht_beladung = berechne_gewicht(solution);
         wert_beladung = berechne_wert(solution);
@@ -84,6 +90,12 @@ public class knapsack {
     }
 
     public int[] greedyRucksack(){
+        if (gewichte.length != werte.length) {
+            throw new IllegalArgumentException("Gewichte und Werte müssen gleich lang sein");
+        }
+        if (maxgewicht < 0) {
+            throw new IllegalArgumentException("Maximalgewicht muss positiv sein");
+        }
         int[] solution = new int[gewichte.length];
         int rest_gewicht = maxgewicht;
         for (int i = 0; i < gewichte.length; i++) {

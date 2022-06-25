@@ -63,6 +63,10 @@ public class knapsack {
             ausgewaehlt[index] = 0;
             return ausgewaehlt;
         }
+        if (werte[index] == 0) {
+            // If the value of the item is 0, then we don't need to consider it
+            return rucksack(ausgewaehlt, rest_gewicht, index + 1, beste_beladung, beste_wert);
+        }
         // verzweigung A
         int[] ausgewaehlt_a = ausgewaehlt.clone();
         ausgewaehlt_a[index] = 1;
@@ -82,7 +86,6 @@ public class knapsack {
 
         int wert_b = berechne_wert(B);
         if (wert_b > beste_wert) {
-            beste_wert = wert_b;
             beste_beladung = B;
         }
 

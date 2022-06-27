@@ -75,6 +75,6 @@ Ausgegeben wird der umgedrehte String. Beachten Sie, dass mit hoher Wahrscheinli
 ###ReverseString
 
 ![img.png](img.png)
-y-Achse = Laufzeit in Millisekunden<br/>x-Achse = Anzahl Characters
+</br>y-Achse = Laufzeit in Millisekunden<br/>x-Achse = Anzahl Characters
 
 

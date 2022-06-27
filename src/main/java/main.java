@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.PrintWriter;
 import java.util.*;
 
 public class main {
@@ -5,6 +7,7 @@ public class main {
 
     public static void calculate_constant() {
         Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+        // Map(key=Array_length, value=Runtime)
         for (int i = 100; i < 10000; i+=100 ) {
             map.put(i, knapsack.worst_case_knapsack_runtime(i));
         }
@@ -14,6 +17,21 @@ public class main {
         }
         avg = avg / map.size();
         System.out.println("Average Constant: " + avg);
+    }
+    public static void worst_case_to_csv() {
+        File file = new File("worst_case_runtime.csv");
+        try {
+            PrintWriter pw = new PrintWriter(file);
+            pw.println("sep=;");
+            pw.println("Array_length;Runtime");
+
+            for (int i = 100; i < 10000; i+=100 ) {
+                pw.println(i + ";" + knapsack.worst_case_knapsack_runtime(i));
+            }
+            pw.close();
+        } catch (Exception e) {
+            System.out.println("Error writing to file");
+        }
     }
     public static void main(String[] args) {
         // build knapsack problem
@@ -50,7 +68,7 @@ public class main {
         System.out.println("Gewicht: " + greedy_knapsack_2.gewicht_beladung);
         System.out.println("Wert: " + greedy_knapsack_2.wert_beladung);
         System.out.println("-----------------------------------------------------");
-        calculate_constant();
+        worst_case_to_csv();
     }
 
 

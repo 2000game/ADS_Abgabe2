@@ -1,3 +1,4 @@
 /.gradle/
 /.idea/
 /build/
+/worst_case_runtime.csv

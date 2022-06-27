@@ -1,5 +1,7 @@
 import org.junit.jupiter.api.Test;
 
+import java.util.Random;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class KnapsackTest {
@@ -180,8 +182,7 @@ class KnapsackTest {
     }
 
     @Test
-    void worst_case_knapsack_runtime_20() {
-        knapsack.worst_case_knapsack_runtime(20);
+    void worst_case_knapsack_runtime_20() {knapsack.worst_case_knapsack_runtime(20);
     }
 
     @Test

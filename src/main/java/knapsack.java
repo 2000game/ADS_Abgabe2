@@ -120,11 +120,11 @@ public class knapsack {
         double finish;
         int[] gewichte = new int[array_length];
         int[] werte = new int[array_length];
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < array_length; i++) {
             gewichte[i] = 1;
             werte[i] = 1;
         }
-        knapsack k = new knapsack(gewichte, werte, array_length);
+        knapsack k = new knapsack(gewichte, werte, array_length*array_length);
         start = System.nanoTime();
         k.backtracking();
         finish = System.nanoTime();

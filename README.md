@@ -49,7 +49,7 @@ mit dem Befehl `reverse namederVariable = new reverse();`
 
 Um dann einen String umzudrehen, geben Sie folgenden Befehl ein;
 
-`namederVariable.reverse("String den umgedreht werden soll")`
+`namederVariable.reverse("String der umgedreht werden soll")`
 
 Ausgegeben wird der umgedrehte String. Beachten Sie, dass mit hoher Wahrscheinlichkeit mit einer StackOverFlowException zu rechnen ist, wenn Sie einen String einsetzen wollen, der länger als 6000 Character ist.
 

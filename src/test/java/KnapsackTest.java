@@ -190,13 +190,11 @@ class KnapsackTest {
     }
 
     @Test
-    @Disabled
     void worst_case_knapsack_runtime_50() {
         knapsack.worst_case_knapsack_runtime(50);
     }
 
     @Test
-    @Disabled
     void worst_case_knapsack_runtime_100() {
         knapsack.worst_case_knapsack_runtime(100);
     }

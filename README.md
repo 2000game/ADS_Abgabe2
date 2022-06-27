@@ -2,6 +2,7 @@
 ######von Felix Kotschenreuther und Robin Bauer
 
 ---
+
 ##Anleitung zur Anwendung der Funktionen
 
 ###Vorbereitung
@@ -62,15 +63,18 @@ Ausgegeben wird der umgedrehte String. Beachten Sie, dass mit hoher Wahrscheinli
 
 
 ###Rucksack nach Backtracking-Verfahren
+
 ![graph backtracking runtime](backtrackingruntime.png)
 <br/>y-Achse = Laufzeit in Millisekunden (ab Länge = 40, Laufzeit von >1 800 000 ms)<br/>x-Achse = Länge des Arrays
 
 ###Rucksack nach Greedy-Verfahren
-![Graph Greedy-Verfahren Runtime](GreedyRunTime.png)<br/>
-y-Achse = Laufzeit in Millisekunden<br/>x-Achse = Länge des Arrays
+
+![Graph Greedy-Verfahren Runtime](GreedyRunTime.png)
+<br/>y-Achse = Laufzeit in Millisekunden<br/>x-Achse = Länge des Arrays
 
 ###ReverseString
-![img.png](img.png)<br/>
+
+![img.png](img.png)
 y-Achse = Laufzeit in Millisekunden<br/>x-Achse = Anzahl Characters
 
 

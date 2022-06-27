@@ -177,16 +177,57 @@ class KnapsackTest {
         k.backtracking();
     }
 
+    // RunTime Backtracking
+
+    @Test
+    void worst_case_knapsack_runtime_5() {
+        knapsack.worst_case_knapsack_runtime(5);
+    }
+
     @Test
     void worst_case_knapsack_runtime_10() {
         knapsack.worst_case_knapsack_runtime(10);
     }
 
     @Test
+    void worst_case_knapsack_runtime_12() {
+        knapsack.worst_case_knapsack_runtime(12);
+    }
+
+    @Test
+    void worst_case_knapsack_runtime_15() {
+        knapsack.worst_case_knapsack_runtime(15);
+    }
+
+    @Test
+    void worst_case_knapsack_runtime_17() {
+        knapsack.worst_case_knapsack_runtime(17);
+    }
+
+    @Test
     void worst_case_knapsack_runtime_20() {knapsack.worst_case_knapsack_runtime(20);
     }
+
     @Test
-    void worst_case_knapsack_runtime_30() {knapsack.worst_case_knapsack_runtime(20);
+    void worst_case_knapsack_runtime_22() {knapsack.worst_case_knapsack_runtime(22);
+    }
+
+    @Test
+    void worst_case_knapsack_runtime_25() {
+        knapsack.worst_case_knapsack_runtime(25);
+    }
+
+    @Test
+    void worst_case_knapsack_runtime_27() {knapsack.worst_case_knapsack_runtime(27);
+    }
+
+    @Test
+    void worst_case_knapsack_runtime_30() {knapsack.worst_case_knapsack_runtime(30);
+    }
+
+    @Test
+    void worst_case_knapsack_runtime_40() {
+        knapsack.worst_case_knapsack_runtime(40);
     }
 
     @Test
@@ -217,4 +258,46 @@ class KnapsackTest {
         knapsack.worst_case_knapsack_runtime(1000);
     }
 
+
+    // RunTime Greedy
+
+    @Test
+    void worst_case_rucksack_runtime_1() {
+        knapsack.worst_case_rucksack_runtime(1);
+    }
+
+
+    @Test
+    void worst_case_rucksack_runtime_10() {
+        knapsack.worst_case_rucksack_runtime(10);
+    }
+
+    @Test
+    void worst_case_rucksack_runtime_1000() {
+        knapsack.worst_case_rucksack_runtime(1000);
+    }
+    @Test
+    void worst_case_rucksack_runtime_2000() {
+        knapsack.worst_case_rucksack_runtime(2000);
+    }
+    @Test
+    void worst_case_rucksack_runtime_5000() {
+        knapsack.worst_case_rucksack_runtime(5000);
+    }
+    @Test
+    void worst_case_rucksack_runtime_10000() {
+        knapsack.worst_case_rucksack_runtime(10000);
+    }
+    @Test
+    void worst_case_rucksack_runtime_100000() {
+        knapsack.worst_case_rucksack_runtime(100000);
+    }
+    @Test
+    void worst_case_rucksack_runtime_200000() {
+        knapsack.worst_case_rucksack_runtime(200000);
+    }
+    @Test
+    void worst_case_rucksack_runtime_500000() {
+        knapsack.worst_case_rucksack_runtime(500000);
+    }
 }

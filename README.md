@@ -1,4 +1,77 @@
-# ADS_Abgabe_2
+#ADS Abgabe 2
+######von Felix Kotschenreuther und Robin Bauer
 
-#Berechnung der Laufzeit
+---
+##Anleitung zur Anwendung der Funktionen
+
+###Vorbereitung
+1. Platzieren Sie den Ordner samt Quelltextdateien in das selbige Laufwerk, auf dem auch das JDK installiert ist.
+2. Öffnen Sie das Terminal/die Shell, gehen Sie in das Verzeichnis `ADS_Abgabe2-master/src/main/java`
+3. Geben Sie folgenden Befehl ein;
+       `javac knapsack.java` oder wenn Sie die ReverseString-Funktion benutzen wollen; 
+   `javac reverse.java`
+4. Gehen Sie in die jshell mit folgendem Befehl;
+    `jshell`
+5. Öffnen Sie die Klassendatei mit dem Befehl `/open knapsack.java` oder im Falle von ReverseString; `/open reverse.java`
+
+
+##Rucksack nach Greedy- und Backtracking-Verfahren
+Um nun die eigentliche Funktion zu verwenden, müssen Sie zuerst eine Instanz von Rucksack erstellen, der einen
+Array mit den Gewichten, einen weiteren Array mit den dazugehörigen Werten, und zuletzt noch das angestrebte Maximalgewicht enthält.
+
+Dies tun Sie mit folgendem Befehl;
+
+`knapsack namederVariable = new knapsack(gewichteArray,werteArray,angestrebtesMaximalgewicht)`
+
+Um nun die Backtracking-Funktion auf diese Instanz anzuwenden, geben Sie folgenden Befehl ein;
+
+`namederVariable.backtracking()`
+
+Ausgegeben aus dieser Funktion wird ein Integer-Array. An den entsprechenden Stellen des Arrays steht entweder eine 0 oder eine 1.
+
+Stände an einer Stelle die 1, ist das Objekt mit demselben Index wie in der knapSack-Instanz, so ist es Teil der Sammlung der Objekte, die am nächsten am Maximalgewicht sind.
+
+Stände an einer Stelle eine 0, so wäre das obengenannte nicht der Fall.
+
+Auf die selbe Instanz kann man gleichermaßen die Greedy-Funktion anwenden. Mit dem Befehl
+
+`namederVariable.greedyRucksack()`
+
+wird ebenso ein Integer-Array ausgegeben, nach derselben Idee wie in der backtracking-Funktion.
+
+
+---
+
+##ReverseString-Funktion
+
+Diese Funktion dreht einen gegebenen String in rückwärtiger Reihenfolge rekursiv um.
+
+Haben Sie die reverse.java-Datei schon in der jshell geöffnet, müssen Sie zuerst eine Instanz der Klasse reverse erstellen
+mit dem Befehl `reverse namederVariable = new reverse();`
+
+Um dann einen String umzudrehen, geben Sie folgenden Befehl ein;
+
+`namederVariable.reverse("String den umgedreht werden soll")`
+
+Ausgegeben wird der umgedrehte String. Beachten Sie, dass mit hoher Wahrscheinlichkeit mit einer StackOverFlowException zu rechnen ist, wenn Sie einen String einsetzen wollen, der länger als 6000 Character ist.
+
+(Geben Sie den Befehl jedoch in einer For-Schleife ein, ist erst (nach eigenen Tests) mit solchen Exceptions ab 15.000 Characters zu rechnen)
+
+---
+##Berechnung der Worst-Case-Laufzeit
+
+
+###Rucksack nach Backtracking-Verfahren
+![graph backtracking runtime](backtrackingruntime.png)
+y-Achse = Laufzeit in Millisekunden (ab Länge = 40, Laufzeit von >1 800 000 ms)<br/>x-Achse = Länge des Arrays
+
+###Rucksack nach Greedy-Verfahren
+![Graph Greedy-Verfahren Runtime](GreedyRunTime.png)
+
+y-Achse = Laufzeit in Millisekunden<br/>x-Achse = Länge des Arrays
+
+###ReverseString
 ![img.png](img.png)
+y-Achse = Laufzeit in Millisekunden<br/>x-Achse = Anzahl Characters
+
+

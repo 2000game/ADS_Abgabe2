@@ -129,7 +129,7 @@ public class knapsack {
         k.backtracking();
         finish = System.nanoTime();
         System.out.println();
-        System.out.println(array_length + "-Array Laenge backtracking\nDauer: " + (finish - start) / 1000000.0 + " ms\n");
+        System.out.println(array_length + "-Array Laenge worst_case backtracking\nDauer: " + (finish - start) / 1000000.0 + " ms\n");
         System.out.println();
         return (int) (finish - start) / 1000000;
     }

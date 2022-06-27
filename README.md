@@ -1,11 +1,11 @@
-#ADS Abgabe 2
-######von Felix Kotschenreuther und Robin Bauer
+# ADS Abgabe 2
+###### von Felix Kotschenreuther und Robin Bauer
 
 ---
 
-##Anleitung zur Anwendung der Funktionen
+## Anleitung zur Anwendung der Funktionen
 
-###Vorbereitung
+### Vorbereitung
 1. Platzieren Sie den Ordner samt Quelltextdateien in das selbige Laufwerk, auf dem auch das JDK installiert ist.
 2. Öffnen Sie das Terminal/die Shell, gehen Sie in das Verzeichnis `ADS_Abgabe2-master/src/main/java`
 3. Geben Sie folgenden Befehl ein;
@@ -16,7 +16,7 @@
 5. Öffnen Sie die Klassendatei mit dem Befehl `/open knapsack.java` oder im Falle von ReverseString; `/open reverse.java`
 
 
-##Rucksack nach Greedy- und Backtracking-Verfahren
+## Rucksack nach Greedy- und Backtracking-Verfahren
 Um nun die eigentliche Funktion zu verwenden, müssen Sie zuerst eine Instanz von Rucksack erstellen, der einen
 Array mit den Gewichten, einen weiteren Array mit den dazugehörigen Werten, und zuletzt noch das angestrebte Maximalgewicht enthält.
 
@@ -43,7 +43,7 @@ wird ebenso ein Integer-Array ausgegeben, nach derselben Idee wie in der backtra
 
 ---
 
-##ReverseString-Funktion
+## ReverseString-Funktion
 
 Diese Funktion dreht einen gegebenen String in rückwärtiger Reihenfolge rekursiv um.
 
@@ -59,20 +59,22 @@ Ausgegeben wird der umgedrehte String. Beachten Sie, dass mit hoher Wahrscheinli
 (Geben Sie den Befehl jedoch in einer For-Schleife ein, ist erst (nach eigenen Tests) mit solchen Exceptions ab 15.000 Characters zu rechnen)
 
 ---
-##Berechnung der Worst-Case-Laufzeit
+## Berechnung der Worst-Case-Laufzeit
 
 
-###Rucksack nach Backtracking-Verfahren
+### Rucksack nach Backtracking-Verfahren
 
 ![graph backtracking runtime](backtrackingruntime.png)
 <br/>y-Achse = Laufzeit in Millisekunden (ab Länge = 40, Laufzeit von >1 800 000 ms)<br/>x-Achse = Länge des Arrays
 
-###Rucksack nach Greedy-Verfahren
+### Rucksack nach Greedy-Verfahren
 
 ![Graph Greedy-Verfahren Runtime](GreedyRunTime.png)
 <br/>y-Achse = Laufzeit in Millisekunden<br/>x-Achse = Länge des Arrays
 
-###ReverseString
+### ReverseString
+
+Rekurrenzgleichung; f(n) = f(n-1)
 
 ![img.png](img.png)
 </br>y-Achse = Laufzeit in Millisekunden<br/>x-Achse = Anzahl Characters

@@ -133,4 +133,25 @@ public class knapsack {
         System.out.println();
         return (int) (finish - start) / 1000000;
     }
+    
+        public static int worst_case_rucksack_runtime(int array_length) {
+        double start;
+        double finish;
+        Random rnd;
+        rnd = new Random();
+        int[] gewichte = new int[array_length];
+        int[] werte = new int[array_length];
+        for (int i = 0; i < array_length; i++) {
+            gewichte[i] = rnd.nextInt(1,15);
+            werte[i] = rnd.nextInt(1,30);
+        }
+        knapsack k = new knapsack(gewichte, werte, array_length*array_length);
+        start = System.nanoTime();
+        k.greedyRucksack();
+        finish = System.nanoTime();
+        System.out.println();
+        System.out.println(array_length + "-Array Laenge worst_case greedy-verfahren\nDauer: " + (finish - start) / 1000000.0 + " ms\n");
+        System.out.println();
+        return (int) (finish - start) / 1000000;
+    }
 }

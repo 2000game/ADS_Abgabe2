@@ -25,7 +25,7 @@ public class main {
             pw.println("sep=;");
             pw.println("Array_length;Runtime");
 
-            for (int i = 100; i < 10000; i+=100 ) {
+            for (int i = 5; i < 30; i+=1 ) {
                 pw.println(i + ";" + knapsack.worst_case_knapsack_runtime(i));
             }
             pw.close();

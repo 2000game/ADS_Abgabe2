@@ -1,8 +1,6 @@
 # ADS Abgabe 2
 ###### von Felix Kotschenreuther und Robin Bauer
 
----
-
 ## Anleitung zur Anwendung der Funktionen
 
 ### Vorbereitung
@@ -41,7 +39,6 @@ Auf die selbe Instanz kann man gleichermaßen die Greedy-Funktion anwenden. Mit 
 wird ebenso ein Integer-Array ausgegeben, nach derselben Idee wie in der backtracking-Funktion.
 
 
----
 
 ## ReverseString-Funktion
 
@@ -58,7 +55,6 @@ Ausgegeben wird der umgedrehte String. Beachten Sie, dass mit hoher Wahrscheinli
 
 (Geben Sie den Befehl jedoch in einer For-Schleife ein, ist erst (nach eigenen Tests) mit solchen Exceptions ab 15.000 Characters zu rechnen)
 
----
 ## Berechnung der Worst-Case-Laufzeit
 
 

@@ -18,3 +18,7 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+testlogger {
+    slowThreshold 0001
+}

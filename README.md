@@ -59,20 +59,22 @@ Ausgegeben wird der umgedrehte String. Beachten Sie, dass mit hoher Wahrscheinli
 
 
 ### Rucksack nach Backtracking-Verfahren
-
+Im Worst-Case von jeglichen Backtracking-Verfahren liegt die Laufzeit bei _O(n!)_, was hier nicht anders sein sollte.
 ![graph backtracking runtime](backtrackingruntime.png)
-<br/>y-Achse = Laufzeit in Millisekunden (ab Länge = 40, Laufzeit von >1 800 000 ms)<br/>x-Achse = Länge des Arrays
+y-Achse = Laufzeit in Millisekunden (ab Länge = 40, Laufzeit von >1 800 000 ms)<br/>x-Achse = Länge des Arrays
 
-### Rucksack nach Greedy-Verfahren
+###Rucksack nach Greedy-Verfahren
+Da an sich schon in der Regel Greedy-Verfahren eine Laufzeit von _O(n*log(n))_ haben, ist auch zu erwarten, dass dies nicht anders in dieser Funktion sein wird.
 
 ![Graph Greedy-Verfahren Runtime](GreedyRunTime.png)
-<br/>y-Achse = Laufzeit in Millisekunden<br/>x-Achse = Länge des Arrays
 
-### ReverseString
+y-Achse = Laufzeit in Millisekunden<br/>x-Achse = Länge des Arrays
+
+###ReverseString
 
 Rekurrenzgleichung; f(n) = f(n-1)
 
 ![img.png](img.png)
-</br>y-Achse = Laufzeit in Millisekunden<br/>x-Achse = Anzahl Characters
+y-Achse = Laufzeit in Millisekunden<br/>x-Achse = Anzahl Characters
 
 

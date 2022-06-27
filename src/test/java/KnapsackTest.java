@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.util.Random;
@@ -184,28 +185,36 @@ class KnapsackTest {
     @Test
     void worst_case_knapsack_runtime_20() {knapsack.worst_case_knapsack_runtime(20);
     }
+    @Test
+    void worst_case_knapsack_runtime_30() {knapsack.worst_case_knapsack_runtime(20);
+    }
 
     @Test
+    @Disabled
     void worst_case_knapsack_runtime_50() {
         knapsack.worst_case_knapsack_runtime(50);
     }
 
     @Test
+    @Disabled
     void worst_case_knapsack_runtime_100() {
         knapsack.worst_case_knapsack_runtime(100);
     }
 
     @Test
+    @Disabled
     void worst_case_knapsack_runtime_200() {
         knapsack.worst_case_knapsack_runtime(200);
     }
 
     @Test
+    @Disabled
     void worst_case_knapsack_runtime_500() {
         knapsack.worst_case_knapsack_runtime(500);
     }
 
     @Test
+    @Disabled
     void worst_case_knapsack_runtime_1000() {
         knapsack.worst_case_knapsack_runtime(1000);
     }

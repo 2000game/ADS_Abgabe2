@@ -84,7 +84,7 @@ Da an sich schon in der Regel Greedy-Verfahren eine Laufzeit von _O(n*log(n))_ h
 ### ReverseString
 
 Rekurrenzgleichung; 
-</br>f(n) = n+f(n-1)        wenn n>0
+</br>f(n) = n+f(n-1)        wenn n>0</br>
 f(n) = 0      wenn n<=0
 
 ![img.png](img.png)

@@ -71,6 +71,8 @@ Zu den Worst-Case-Laufzeittests von Backtracking, der Worst-Case wäre, wenn der
 ### Rucksack nach Backtracking-Verfahren
 
 Wir schätzen, dass die Rekurrenzgleichung bei `f(n) = 2*f(n-1)+c*n` liegen wird.
+Der Worst-Case in diesem Verfahren wäre, wenn alle Objekte den selben Wert und das selbe Gewicht hätten, und das Maximalgewicht erst (wenn überhaupt) erreicht wird, wenn alle Objekte durchgegangen wurden (sprich wenn alle Gewichte und Werte bei 1 liegen, dass das Maximalgewicht mindestens die Array-Länge beträgt)
+
 Im Worst-Case von jeglichen Backtracking-Verfahren liegt die Laufzeit bei _O(2^n)_, was hier nicht anders sein sollte. Die Konstante c ist ungefähr 2.
 
 ![graph backtracking runtime](backtrackingruntime.png)

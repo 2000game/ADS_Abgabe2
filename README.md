@@ -60,6 +60,7 @@ Ausgegeben wird der umgedrehte String. Beachten Sie, dass mit hoher Wahrscheinli
 
 ### Rucksack nach Backtracking-Verfahren
 Im Worst-Case von jeglichen Backtracking-Verfahren liegt die Laufzeit bei _O(2^n)_, was hier nicht anders sein sollte. Die Konstante c ist ungefähr 2.
+
 ![graph backtracking runtime](backtrackingruntime.png)
 <br/>y-Achse = Laufzeit in Millisekunden (ab Länge = 40, Laufzeit von >1 800 000 ms)<br/>x-Achse = Länge des Arrays
 

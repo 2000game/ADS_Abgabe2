@@ -32,7 +32,7 @@ Stände an einer Stelle die 1, ist das Objekt mit demselben Index wie in der kna
 
 Stände an einer Stelle eine 0, so wäre das obengenannte nicht der Fall.
 
-Auf die selbe Instanz kann man gleichermaßen die Greedy-Funktion anwenden. Mit dem Befehl
+Auf eine gleiche Instanz kann man gleichermaßen die Greedy-Funktion anwenden. Mit dem Befehl
 
 `namederVariable.greedyRucksack()`
 

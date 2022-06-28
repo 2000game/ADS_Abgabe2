@@ -89,6 +89,7 @@ Da an sich schon in der Regel Greedy-Verfahren eine Laufzeit von _O(n*log(n))_ h
 
 Rekurrenzgleichung; 
 </br>f(n) = n+f(n-1)
+</br>f(n-1) neigt gegen 0, daher wäre würde die Laufzeit bei O(n) liegen.
 
 ![img.png](img.png)
 <br/>y-Achse = Laufzeit in Millisekunden<br/>x-Achse = Anzahl Characters

@@ -2,8 +2,28 @@ import java.io.File;
 import java.io.PrintWriter;
 import java.util.*;
 
+import static java.lang.Math.pow;
+
 public class main {
    static Random r = new Random();
+
+   public static long fakultaet(int n) {
+      if (n == 0) {
+         return 1;
+      }
+      return n * fakultaet(n - 1);
+   }
+
+   public static void calculate_backtracking_constant() {
+       float constant = 0;
+       int counter = 0;
+        for (int i = 5; i < 30; i++) {
+            double result = knapsack.worst_case_backtracking_runtime(i);
+            constant += pow(2, i) / result;
+            counter++;
+        }
+        System.out.println("Backtracking Constant: " + constant / counter);
+   }
 
     public static void worst_case_to_csv() {
         File file = new File("worst_case_runtime.csv");

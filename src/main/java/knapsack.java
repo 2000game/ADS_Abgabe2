@@ -118,7 +118,7 @@ public class knapsack {
         return solution;
     }
 
-    public static int worst_case_backtracking_runtime(int array_length) {
+    public static double worst_case_backtracking_runtime(int array_length) {
         double start;
         double finish;
         int[] gewichte = new int[array_length];
@@ -134,9 +134,9 @@ public class knapsack {
         System.out.println();
         System.out.println(array_length + "-Array Laenge worst_case backtracking\nDauer: " + (finish - start) / 1000000.0 + " ms\n");
         System.out.println();
-        return (int) (finish - start) / 1000000;
+        return (finish - start) / 1000000;
     }
-    
+
         public static int worst_case_greedy_runtime(int array_length) {
         double start;
         double finish;

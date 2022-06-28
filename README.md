@@ -72,7 +72,7 @@ Da an sich schon in der Regel Greedy-Verfahren eine Laufzeit von _O(n*log(n))_ h
 
 ### ReverseString
 
-Rekurrenzgleichung; f(n) = f(n-1)
+Rekurrenzgleichung; f(n) = n+f(n-1)
 
 ![img.png](img.png)
 <br/>y-Achse = Laufzeit in Millisekunden<br/>x-Achse = Anzahl Characters

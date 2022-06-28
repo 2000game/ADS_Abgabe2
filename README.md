@@ -55,13 +55,15 @@ Ausgegeben wird der umgedrehte String. Beachten Sie, dass mit hoher Wahrscheinli
 
 (Geben Sie den Befehl jedoch in einer For-Schleife ein, ist erst (nach eigenen Tests) mit solchen Exceptions ab 15.000 Characters zu rechnen)
 
-## Ausführung der Tests über Kommandozeile
+## Ausführung der Tests
 
 Die Unittests haben wir mithilfe dem JUnit-Framework angefertigt, und können einfach über das vorliegende Gradle-Skript ausgeführt werden.
 
 1. Gehen Sie in das Verzeichnis `/ADS_Abgabe2-master/`
 2. Wenn Sie Windows benutzen, geben Sie folgenden Befehl ein; `gradlew.bat test`</br>Wenn Sie Linux benutzen, `gradlew test`
 3. Nun werden Ihnen alle Tests angezeigt und ob Sie funktionierten.
+
+Zu den Worst-Case-Laufzeittests von Backtracking, der Worst-Case wäre, wenn der Algorithmus durch alle Werte bzw. Gewichte durchgehen müsste. Dies wäre der Fall, wenn alle Werte und Gewichte den selben Wert haben (hier 1) und das Maximalgewicht erst nachdem alle Objekte aufgenommen wurden entweder erreicht wird bzw. selbst dann immer noch nicht erreicht wird. </br>Daher werden die Laufzeittests mit eben solchen Arrays durchgeführt
 
 ## Berechnung der Worst-Case-Laufzeit
 

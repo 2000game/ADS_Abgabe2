@@ -5,19 +5,6 @@ import java.util.*;
 public class main {
    static Random r = new Random();
 
-    public static void calculate_constant() {
-        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
-        // Map(key=Array_length, value=Runtime)
-        for (int i = 100; i < 10000; i+=100 ) {
-            map.put(i, knapsack.worst_case_knapsack_runtime(i));
-        }
-        int avg = 0;
-        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            avg += entry.getKey() / entry.getValue();
-        }
-        avg = avg / map.size();
-        System.out.println("Average Constant: " + avg);
-    }
     public static void worst_case_to_csv() {
         File file = new File("worst_case_runtime.csv");
         try {
@@ -26,7 +13,7 @@ public class main {
             pw.println("Array_length;Runtime");
 
             for (int i = 5; i < 30; i+=1 ) {
-                pw.println(i + ";" + knapsack.worst_case_knapsack_runtime(i));
+                pw.println(i + ";" + knapsack.worst_case_backtracking_runtime(i));
             }
             pw.close();
         } catch (Exception e) {
@@ -68,7 +55,6 @@ public class main {
         System.out.println("Gewicht: " + greedy_knapsack_2.gewicht_beladung);
         System.out.println("Wert: " + greedy_knapsack_2.wert_beladung);
         System.out.println("-----------------------------------------------------");
-        worst_case_to_csv();
     }
 
 

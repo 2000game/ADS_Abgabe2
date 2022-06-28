@@ -1,6 +1,7 @@
 import java.util.Random;
 
 public class knapsack {
+    private static final Random rnd = new Random();
     protected int[] gewichte;
     protected int[] werte;
     protected int maxgewicht;
@@ -139,8 +140,6 @@ public class knapsack {
         public static int worst_case_greedy_runtime(int array_length) {
         double start;
         double finish;
-        Random rnd;
-        rnd = new Random();
         int[] gewichte = new int[array_length];
         int[] werte = new int[array_length];
         for (int i = 0; i < array_length; i++) {

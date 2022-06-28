@@ -117,7 +117,7 @@ public class knapsack {
         return solution;
     }
 
-    public static int worst_case_knapsack_runtime(int array_length) {
+    public static int worst_case_backtracking_runtime(int array_length) {
         double start;
         double finish;
         int[] gewichte = new int[array_length];
@@ -136,7 +136,7 @@ public class knapsack {
         return (int) (finish - start) / 1000000;
     }
     
-        public static int worst_case_rucksack_runtime(int array_length) {
+        public static int worst_case_greedy_runtime(int array_length) {
         double start;
         double finish;
         Random rnd;

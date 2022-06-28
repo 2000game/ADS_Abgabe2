@@ -55,6 +55,14 @@ Ausgegeben wird der umgedrehte String. Beachten Sie, dass mit hoher Wahrscheinli
 
 (Geben Sie den Befehl jedoch in einer For-Schleife ein, ist erst (nach eigenen Tests) mit solchen Exceptions ab 15.000 Characters zu rechnen)
 
+## Ausführung der Tests über Kommandozeile
+
+Die Unittests haben wir mithilfe dem JUnit-Framework angefertigt, und können einfach über das vorliegende Gradle-Skript ausgeführt werden.
+
+1. Gehen Sie in das Verzeichnis `/ADS_Abgabe2-master/`
+2. Wenn Sie Windows benutzen, geben Sie folgenden Befehl ein; `gradlew.bat test`</br>Wenn Sie Linux benutzen, `gradlew test`
+3. Nun werden Ihnen alle Tests angezeigt und ob Sie funktionierten.
+
 ## Berechnung der Worst-Case-Laufzeit
 
 

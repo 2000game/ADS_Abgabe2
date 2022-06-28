@@ -69,6 +69,8 @@ Zu den Worst-Case-Laufzeittests von Backtracking, der Worst-Case wäre, wenn der
 
 
 ### Rucksack nach Backtracking-Verfahren
+
+Wir schätzen, dass die Rekurrenzgleichung bei `f(n) = 2*f(n-1)+c*n` liegen wird.
 Im Worst-Case von jeglichen Backtracking-Verfahren liegt die Laufzeit bei _O(2^n)_, was hier nicht anders sein sollte. Die Konstante c ist ungefähr 2.
 
 ![graph backtracking runtime](backtrackingruntime.png)
@@ -84,8 +86,7 @@ Da an sich schon in der Regel Greedy-Verfahren eine Laufzeit von _O(n*log(n))_ h
 ### ReverseString
 
 Rekurrenzgleichung; 
-</br>f(n) = n+f(n-1)        wenn n>0</br>
-f(n) = 0      wenn n<=0
+</br>f(n) = n+f(n-1)
 
 ![img.png](img.png)
 <br/>y-Achse = Laufzeit in Millisekunden<br/>x-Achse = Anzahl Characters

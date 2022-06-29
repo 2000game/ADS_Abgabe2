@@ -22,3 +22,18 @@ test {
 testlogger {
     slowThreshold 0001
 }
+
+task execute(type:JavaExec) {
+    mainClass = 'src/main/java/main.java'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+jar {
+    manifest {
+        attributes( 'Main-Class' : 'src/main/java/main.java')
+    }
+}
+
+task runExecutableJar(type: JavaExec) {
+    classpath = files(tasks.jar)
+}

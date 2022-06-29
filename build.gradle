@@ -24,13 +24,13 @@ testlogger {
 }
 
 task execute(type:JavaExec) {
-    mainClass = 'src/main/java/main.java'
+    mainClass = 'src/main/java/main'
     classpath = sourceSets.main.runtimeClasspath
 }
 
 jar {
     manifest {
-        attributes( 'Main-Class' : 'src/main/java/main.java')
+        attributes( 'Main-Class' : 'src/main/java/main')
     }
 }
 

@@ -13,6 +13,9 @@
     `jshell`
 5. Öffnen Sie die Klassendatei mit dem Befehl `/open knapsack.java` oder im Falle von ReverseString; `/open reverse.java`
 
+Alternativ kann das Projekt auch mit gradle compiled werden, dazu beachten sie die Hinweise beim "Ausführung der Tests".
+Mit dem Befehl `./gradlew build -x test` wird das Projekt kompiliert.
+
 
 ## Rucksack nach Greedy- und Backtracking-Verfahren
 Um nun die eigentliche Funktion zu verwenden, müssen Sie zuerst eine Instanz von Rucksack erstellen, der einen
@@ -60,8 +63,10 @@ Ausgegeben wird der umgedrehte String. Beachten Sie, dass mit hoher Wahrscheinli
 Die Unittests haben wir mithilfe dem JUnit-Framework angefertigt, und können einfach über das vorliegende Gradle-Skript ausgeführt werden.
 
 1. Gehen Sie in das Verzeichnis `/ADS_Abgabe2-master/`
-2. Wenn Sie Windows benutzen, geben Sie folgenden Befehl ein; `gradlew.bat test`</br>Wenn Sie Linux benutzen, `gradlew test`
-3. Nun werden Ihnen alle Tests angezeigt und ob Sie funktionierten.
+2. Stellen sie sicher, dass eine JDK installiert ist. Alternativ können sie an jeden Befehl `"-Dorg.gradle.java.home=path/to/jdk"` anhängen. Die Anführungszeichen können unter linux weggelassen werden.
+3. Wenn Sie Windows benutzen, geben Sie folgenden Befehl ein; `./gradlew.bat test`</br>Wenn Sie Linux benutzen, `./gradlew test`
+4. Falls unter Linux die Datei nicht ausführbar ist geben sie folgenden Befehl ein; `chmod +x gradlew`
+5. Nun werden Ihnen alle Tests angezeigt und ob Sie funktionierten.
 
 Zu den Worst-Case-Laufzeittests von Backtracking, der Worst-Case wäre, wenn der Algorithmus durch alle Werte bzw. Gewichte durchgehen müsste. Dies wäre der Fall, wenn alle Werte und Gewichte den selben Wert haben (hier 1) und das Maximalgewicht erst nachdem alle Objekte aufgenommen wurden entweder erreicht wird bzw. selbst dann immer noch nicht erreicht wird. </br>Daher werden die Laufzeittests mit eben solchen Arrays durchgeführt
 
@@ -70,18 +75,19 @@ Zu den Worst-Case-Laufzeittests von Backtracking, der Worst-Case wäre, wenn der
 
 ### Rucksack nach Backtracking-Verfahren
 
-Wir schätzen, dass die Rekurrenzgleichung bei `f(n) = 2*f(n-1)+c*n` liegen wird.
-Der Worst-Case in diesem Verfahren wäre, wenn alle Objekte den selben Wert und das selbe Gewicht hätten, und das Maximalgewicht erst (wenn überhaupt) erreicht wird, wenn alle Objekte durchgegangen wurden (sprich wenn alle Gewichte und Werte bei 1 liegen, dass das Maximalgewicht mindestens die Array-Länge beträgt)
+Wir schätzen, dass die Rekurrenzgleichung bei `T(n) = 2*T(n-1)` liegen wird. Der Worst-Case in diesem Verfahren wäre, wenn alle Objekte den selben Wert und das selbe Gewicht hätten, und das Maximalgewicht erst (wenn überhaupt) erreicht wird, wenn alle Objekte durchgegangen wurden (sprich wenn alle Gewichte und Werte bei 1 liegen, dass das Maximalgewicht mindestens die Array-Länge beträgt)
+
+![Induktion](./images/induktion.jpg)
 
 Im Worst-Case von jeglichen Backtracking-Verfahren liegt die Laufzeit bei _O(2^n)_, was hier nicht anders sein sollte. Die Konstante c ist ungefähr 2.
 
-![graph backtracking runtime](backtrackingruntime.png)
+![graph backtracking runtime](images/backtrackingruntime.png)
 <br/>y-Achse = Laufzeit in Millisekunden (ab Länge = 40, Laufzeit von >1 800 000 ms)<br/>x-Achse = Länge des Arrays
 
 ### Rucksack nach Greedy-Verfahren
 Da an sich schon in der Regel Greedy-Verfahren eine Laufzeit von _O(n*log(n))_ haben, ist auch zu erwarten, dass dies nicht anders in dieser Funktion sein wird.
 
-![Graph Greedy-Verfahren Runtime](GreedyRunTime.png)
+![Graph Greedy-Verfahren Runtime](images/GreedyRunTime.png)
 
 <br/>y-Achse = Laufzeit in Millisekunden<br/>x-Achse = Länge des Arrays
 
@@ -91,7 +97,7 @@ Rekurrenzgleichung;
 </br>f(n) = n+f(n-1)
 </br>f(n-1) neigt gegen 0, daher wäre würde die Laufzeit bei O(n) liegen.
 
-![img.png](img.png)
+![img.png](images/reverse.png)
 <br/>y-Achse = Laufzeit in Millisekunden<br/>x-Achse = Anzahl Characters
 
 
